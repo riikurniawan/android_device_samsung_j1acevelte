@@ -22,21 +22,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-# TODO: Add overlay folder
-# Overlays
-#PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+# Overlay
+PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # TODO: Add Vendor sprd
 # Sprd proprietaries drm libomx
 #$(call inherit-product, vendor/sprd/proprietaries/proprietaries-scx35l.mk)
 
-# TODO: Add init folder
 # init services
-#$(call inherit-product, $(LOCAL_PATH)/init/init_rc.mk)
+$(call inherit-product, $(LOCAL_PATH)/init/init_rc.mk)
 
-# TODO: Add gps folder
 # gps
-#$(call inherit-product, $(LOCAL_PATH)/gps/device-gps.mk)
+$(call inherit-product, $(LOCAL_PATH)/gps/device-gps.mk)
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
