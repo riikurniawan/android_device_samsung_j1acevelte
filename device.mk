@@ -26,7 +26,7 @@ $(call inherit-product, device/common/gps/gps_eu_supl.mk)
 PRODUCT_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Sprd proprietaries drm libomx
-#$(call inherit-product, vendor/sprd/proprietaries/proprietaries-scx35l.mk)
+$(call inherit-product, vendor/sprd/proprietaries/proprietaries-scx35l.mk)
 
 # init services
 $(call inherit-product, $(LOCAL_PATH)/init/init_rc.mk)
@@ -72,7 +72,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
 
-# TODO:
 # Audio configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_hw.xml:system/etc/audio_hw.xml \
@@ -81,7 +80,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/codec_pga.xml:system/etc/codec_pga.xml \
     $(LOCAL_PATH)/configs/audio/tiny_hw.xml:system/etc/tiny_hw.xml
 
-# TODO:
 # BT configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db \
@@ -96,7 +94,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media/media_profiles.xml:system/etc/media_profiles.xml
 
-# TODO:
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
@@ -157,7 +154,6 @@ PRODUCT_PACKAGES += \
     service_contexts \
     selinux_version
 
-# TODO:
 # WPA supplicant
 PRODUCT_PACKAGES += \
     hostapd \
