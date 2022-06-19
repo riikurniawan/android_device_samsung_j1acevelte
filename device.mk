@@ -322,7 +322,6 @@ PRODUCT_PACKAGES += \
     rild \
     libril
 
-# TODO:
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ril/vendor/libsec-ril.so:system/lib/libsec-ril.so \
